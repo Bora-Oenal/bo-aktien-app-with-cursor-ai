@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Aktienbewertung</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- falls du eigenes CSS brauchst -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-sans bg-gray-50">
+
+  <!-- Neuer zentrierter Container -->
+  <div class="max-w-[1200px] mx-auto px-4 pt-3.5">
+
+    <h1 class="text-2xl font-semibold mb-4">Aktienbewertung 📈</h1>
+
+    <button id="loadBtn"
+            class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">
+      Aktien laden
+    </button>
+
+  <!-- Tabelle im Scroll-Wrapper -->
+  <div class="overflow-x-auto mt-4 flex justify-center">
+
+    <!-- vorher: w-full … -->
+<table id="stocksTable"
+       class="border-collapse hidden w-max min-w-[1200px]">
+
+      <thead>
+        <tr class="bg-gray-200 text-sm">
+          <th class="p-2 border">Name</th>
+          <th class="p-2 border">Kurs</th>
+
+          <th class="p-2 border">Growth %</th>        <!-- F -->
+          <th class="p-2 border">EPS 5 J</th>        <!-- G -->
+          <th class="p-2 border">KGV 5 J</th>        <!-- H -->
+          <th class="p-2 border">Kurs 5 J</th>       <!-- I -->
+          <th class="p-2 border">Fair Value</th>     <!-- J/K -->
+          <th class="p-2 border">Δ €</th>            <!-- L -->
+          <th class="p-2 border">Δ %</th>            <!-- M -->
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+</div>
+
+  </div>
+</body>
+
+  <script src="script.js"></script>
+</body>
+</html>

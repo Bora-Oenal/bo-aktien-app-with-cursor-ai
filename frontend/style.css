@@ -1,0 +1,27 @@
+/* CSS-Stile für die Aktienbewertungs-App */
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+} 
+/* Erste Spalte: nur so breit wie nötig (+ etwas Padding) */
+#stocksTable th:first-child,
+#stocksTable td:first-child {
+    white-space: nowrap;   /* verhindert Zeilenumbruch */
+    width: 1%;             /* schrumpft auf Inhalts-Breite */
+}
+/* Erste Spalte: nur so breit wie der längste Begriff */
+#stocksTable th:first-child,
+#stocksTable td:first-child{
+    white-space: nowrap; /* kein Zeilenumbruch */
+    width: 1px;          /* Browser nimmt exakt die nötige Breite */
+}
+
+/* Tabelle darf jetzt ihre natürliche Breite haben */
+#stocksTable{
+    table-layout: auto;
+}
